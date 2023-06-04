@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif, "Roboto";
+}
+
+body {
+  background: linear-gradient(45deg, rgb(104, 6, 75), rgb(6, 49, 100));
+  height: 100vh;
+}
+body .hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+body .hero .container {
+  width: 30rem;
+  height: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .hero .container .time {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.113);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+}
+body .hero .container .time span {
+  width: 4rem;
+  font-size: 3.2rem;
+  color: white;
+  text-align: center;
+}
+body .hero .container .time::after {
+  content: "today";
+  height: 2rem;
+  width: 100%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+body .hero .container::before {
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top: -4.5rem;
+  left: -4.5rem;
+  background-color: #32BEA6;
+  border: none;
+  border-radius: 1rem;
+  z-index: -1;
+}
+body .hero .container::after {
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  bottom: -4.5rem;
+  right: -4.5rem;
+  background-color: rgb(255, 0, 234);
+  border: none;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media (max-width: 480px) {
+  body .hero .container {
+    width: 20rem;
+    transition: all 1s ease;
+  }
+  body .hero .container .time {
+    padding: 0 5%;
+  }
+  body .hero .container .time span {
+    font-size: 2.5rem;
+    transition: all 1s ease;
+    font-weight: 600;
+  }
+  body .hero .container::before {
+    width: 5rem;
+    height: 5rem;
+    left: -1.5rem;
+    top: -2rem;
+    transition: all 1s ease;
+  }
+  body .hero .container::after {
+    width: 5rem;
+    height: 5rem;
+    right: -1.5rem;
+    bottom: -2rem;
+    transition: all 1s ease;
+  }
+}/*# sourceMappingURL=index.css.map */
